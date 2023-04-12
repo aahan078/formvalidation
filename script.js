@@ -41,6 +41,8 @@ sendData(sRate,count);
 
  if(emailVal.charAt(emailVal.length-4)!='.')
  return false;
+//  if(emailVal==","||">"||"<"||"{"||"}"||"&"||"*"||"#"||"%"||"^"||"+")
+//  return false
 //  if(emailVal.charAt(emailVal.length-3)!='.')
 //  return false;
 
