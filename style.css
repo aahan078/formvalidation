@@ -50,6 +50,7 @@ background: linear-gradient(90deg, rgba(232,18,235,1) 0%, rgba(200,138,212,1) 0%
 .form-control{
     margin-bottom: 30px;
     position: relative;
+    font-family: sans-serif;
 }
 
 .form-control label{

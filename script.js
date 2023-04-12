@@ -11,7 +11,8 @@ const form = document.getElementById('form');
  })
 const sendData = (sRate,count)=>{
 if(sRate===count){
-    alert("Registration successfull")
+    // alert("Registration successfull")
+    swal ( "Form validated" ,  "Login success" ,  "success" )
 }
 }
  //for final validation
@@ -38,6 +39,11 @@ sendData(sRate,count);
 
  if(dot === emailVal.length -1) return false;
 
+ if(emailVal.charAt(emailVal.length-4)!='.')
+ return false;
+//  if(emailVal.charAt(emailVal.length-3)!='.')
+//  return false;
+
  return true;
     
  }
@@ -50,9 +56,12 @@ sendData(sRate,count);
 
     if(usernameVal ===""){
         setErrorMsg(username, "Username can not be blank");
-    }else if(usernameVal.length<=2){
+    }else if(usernameVal.length<=2 ){
         setErrorMsg(username,'Username min 3 char');
-    }else{
+    }else if(emailVal===usernameVal){
+        setErrorMsg(username,"Username can not be email")
+    }
+    else{
         setSuccessMsg(username);
     }
 
