@@ -9,21 +9,21 @@ const form = document.getElementById('form');
     event.preventDefault();
     validate();
  })
-const sendData = (sRate,count)=>{
+const sendData = (usernameVal,sRate,count)=>{
 if(sRate===count){
     // alert("Registration successfull")
-    swal ( "Form validated" ,  "Login success" ,  "success" )
+    swal ( "Welcome-" + usernameVal ,  "Registration successful" ,  "success" )
 }
 }
  //for final validation
 
- const successMsg =()=>{
+ const successMsg =(usernameVal)=>{
 let formCon = document.getElementsByClassName('form-control');
 var count = formCon.length-1
 for(var i=0;i<formCon.length;i++){
     if(formCon[i].className=== "form-control success"){
         var sRate = 0 +i ;
-sendData(sRate,count);
+sendData(usernameVal,sRate,count);
     }else{
         return false;
     }
@@ -96,7 +96,7 @@ sendData(sRate,count);
         setSuccessMsg(cpassword);
     }
 
-    successMsg()
+    successMsg(usernameVal)
  }
 
  function setErrorMsg(input , errormsgs){
